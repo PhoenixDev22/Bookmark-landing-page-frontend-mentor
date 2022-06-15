@@ -2,13 +2,14 @@ const logo = document.getElementById("logo");
 const naviagtion = document.getElementById("navigation");
 const toggleBtn = document.getElementById("toggle__btn");
 
-toggleBtn.addEventListener("click", () => {
+toggleBtn.addEventListener("click", (e) => {
     toggleBtn.getAttribute("aria-expanded") ==="false"?toggleBtn.setAttribute("aria-expanded", "true"):toggleBtn.setAttribute("aria-expanded", "false");
     toggleBtn.children[0].classList.toggle("disappear")
     toggleBtn.children[1].classList.toggle("disappear")
     naviagtion.classList.toggle("navigation-appear");
     logo.classList.toggle("logo__white")
     document.body.classList.toggle("no-scroll")
+
 })
 
 document.addEventListener("keyup", (e) =>{

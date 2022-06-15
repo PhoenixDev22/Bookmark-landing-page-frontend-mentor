@@ -292,7 +292,7 @@ body{
 }
 .description{
     line-height: 1.6;
-    color: hsl(229deg 5% 37%);
+    color: var(--Grayish-Blue);
     font-size: 0.938rem;
     text-align: center;
     max-width: 26.25rem;
@@ -311,7 +311,7 @@ body{
     padding: 1.25rem 0;
     width: 100%;
     font-size: 1rem;
-    color: hsl(229deg 12% 42%);
+    color: var(--Grayish-Blue);
     border-bottom: 0.063em solid rgb(199, 202, 211);
     position: relative;
     transition: .25s ease-in-out;
@@ -334,6 +334,9 @@ body{
     height: .25em;
     transition: opacity .25s ease-in-out;
     opacity: 0;
+}
+.active.tab{
+    color: var(--Very-Dark-Blue)
 }
 .active.tab::before{
     opacity: 1;
@@ -431,6 +434,9 @@ body{
 .FAQs{
     padding: 2.5rem 0;
 }
+section > *:first-child{
+    flex-direction: column;
+}
 .FAQs>div:last-child{
     flex-direction: column;
     flex-wrap: nowrap;
@@ -474,9 +480,10 @@ body{
 }
 .answer {
     text-align: left;
-    color: hsl(229deg 5% 37%);
+    color: var(--Grayish-Blue);
     font-size: 0.938rem;
     line-height: 1.6;
+    padding: 1rem 0
 }
 .faq__link{
     margin: 2.5rem 0;
@@ -676,6 +683,7 @@ footer nav li{
         display: none;
     }
     .navigation {
+        /* display: flex; */
         flex-direction: row;
         padding: 0; 
         position: unset; 
@@ -685,13 +693,19 @@ footer nav li{
         width: unset;
         height: 6.25rem;
     }
+    .navigation-item{
+        margin-inline: .42rem
+    }
     .top-border {
         border-top: none;
+    }
+    .nav__link{
+        font-size: .8125rem;
     }
     .nav__link:not(.login__link) {
         color: var(--Very-Dark-Blue);
         border-bottom: none;
-        padding: 10px;
+        padding: .625rem;
     }
     .nav__link:not(.login__link):hover{
         color: var(--Soft-Red)
@@ -699,7 +713,7 @@ footer nav li{
     .login__link {
         margin-top: 0;
         color: #fff;
-        padding: .625rem;
+        padding: .625rem 2rem;
         background-color: var(--Soft-Red);
         border: 0.125em solid var(--Soft-Red);
         box-shadow: 0 5px 15px rgba(0,0,0,.1);
@@ -815,8 +829,13 @@ footer nav li{
         font-size: 1.25rem;
     }
     .title {
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-bottom: 1.875rem;
+    }
+    .description{
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 33.75rem;
     }
     .col-3__content, .col-3__image{
         max-width: 35rem

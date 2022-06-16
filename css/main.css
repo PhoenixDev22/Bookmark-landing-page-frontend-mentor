@@ -450,7 +450,7 @@ section > *:first-child{
     padding: 1.25rem 0;
     color: var(--Very-Dark-Blue);
     border-bottom: 0.063em solid rgb(199, 202, 211);
-    font-size: 0.938rem;
+    font-size: .875rem;
     margin-bottom: 5px;
     font-weight: 500;
     transition: .25s ease-in;

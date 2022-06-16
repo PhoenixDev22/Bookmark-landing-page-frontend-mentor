@@ -110,15 +110,15 @@ function changeTheTabs (e){
 
 
 // close the open details when select another details
-const allTheSummary = [...document.querySelectorAll(".FAQs summary>div")]
+const allTheSummary = [...document.querySelectorAll(".FAQs summary")]
 
 allTheSummary.forEach(summary => {
     summary.addEventListener("click", (e) =>{
         console.log(e.currentTarget.parentNode)
-        if(e.currentTarget.parentNode.parentNode.hasAttributes("open") ){
+        if(e.currentTarget.parentNode.hasAttributes("open") ){
             allTheSummary.forEach(summary => {
                 if(summary.dataset.answer !== e.currentTarget.dataset.answer ){
-                    summary.parentNode.parentNode.removeAttribute("open")
+                    summary.parentNode.removeAttribute("open")
                 }else{
                     return
                 }  

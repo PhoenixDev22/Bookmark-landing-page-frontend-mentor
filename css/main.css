@@ -464,19 +464,6 @@ section > *:first-child{
     height: 0.75rem;
     transition: .3s ease-in
 }
-/* add the transform for the arrow on the image when the details is open  */
-.question:focus {
-    outline: .2em solid var(--Soft-Red);
-}
-.question:focus .arrow {
-    transform: rotate(180deg);
-}
-.question .arrow path{
-    transition: .25s ease-in;
-}
-.question:focus .arrow path{
-    stroke: var(--Soft-Red);
-}
 .answer {
     text-align: left;
     color: var(--Grayish-Blue);
@@ -493,13 +480,18 @@ summary:focus, summary:focus-visible{
 }
 details[open] summary{
     outline: .2em dashed var(--Soft-Red);
-
 }
 details[open] .arrow{
     transform: rotate(180deg);
 }
 details[open] .arrow path{
     stroke: var(--Soft-Red);
+}
+details:not([open]) .arrow{
+    transform: rotate(0);
+}
+details:not([open]) .arrow path{
+    stroke: var(--Soft-Blue);
 }
 /* Contact Styles */
 .contact{

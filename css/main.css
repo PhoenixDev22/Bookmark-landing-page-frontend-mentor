@@ -154,7 +154,7 @@ body{
     width: 100%;
     opacity: 0;
     z-index: 10;
-    transition: transform .25s linear, opacity .2s linear;
+    transition: transform .25s linear , opacity .2s linear;
 }
 .navigation-appear{
     transform: translateY(0);
@@ -362,7 +362,6 @@ body{
     flex-direction: column-reverse;
     justify-content: center; 
     gap: 5rem;
-    transition: .25s ease-in;
 }
 .lower-part .col-3.opacity-1{
     display: flex;
@@ -683,7 +682,6 @@ footer nav li{
         display: none;
     }
     .navigation {
-        /* display: flex; */
         flex-direction: row;
         padding: 0; 
         position: unset; 

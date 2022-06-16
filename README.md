@@ -99,11 +99,10 @@ Users should be able to:
 
 
 
-
 ### What I learned
 
-- Adding `skip to main content ` link as keyboard users have to navigate through each link at the first of the page in the menu to get to the main content. 
-- Accessisible tabbbable content.
+- Adding `skip to main content ` link as keyboard users have to navigate through each link at the first of the page in the menu to get to the main content. As there aren't many links in the naviagtion but just want to implement it in the project.
+- Accessisible tabbable content.
 - Accessisible  accordions.
 - Adding `rel="noopener" ` or `rel="noreferrer"` to ` target="_blank"`links to avoid performances and security issues.
 

@@ -96,6 +96,7 @@ Users should be able to:
 - Mobile-first workflow
 - Js
 - Using the lighthouse.
+- Using Autoprefixer (Adding vendor prefixes)
 
 
 

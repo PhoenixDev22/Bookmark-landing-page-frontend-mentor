@@ -567,9 +567,7 @@ section > *:first-child{
 summary:focus, summary:focus-visible{
     outline: .2em dashed var(--Soft-Blue);
 }
-details[open] summary{
-    outline: .2em dashed var(--Soft-Red);
-}
+
 details[open] .arrow{
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);

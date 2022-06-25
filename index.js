@@ -1,11 +1,13 @@
 const logo = document.getElementById("logo");
 const naviagtion = document.getElementById("navigation");
 const toggleBtn = document.getElementById("toggle__btn");
+const hamburgerIcon = document.querySelector("#toggle__btn .hamburger__icon")
+const closeIcon = document.querySelector("#toggle__btn .close__icon")
 
 toggleBtn.addEventListener("click", (e) => {
     toggleBtn.getAttribute("aria-expanded") ==="false"?toggleBtn.setAttribute("aria-expanded", "true"):toggleBtn.setAttribute("aria-expanded", "false");
-    toggleBtn.children[0].classList.toggle("disappear")
-    toggleBtn.children[1].classList.toggle("disappear")
+    hamburgerIcon.classList.toggle("disappear")
+    closeIcon.classList.toggle("disappear")
     naviagtion.classList.toggle("navigation-appear");
     logo.classList.toggle("logo__white")
     document.body.classList.toggle("no-scroll")
@@ -14,8 +16,8 @@ toggleBtn.addEventListener("click", (e) => {
 
 document.addEventListener("keyup", (e) =>{
     if(e.key === "escape" ){
-        toggleBtn.children[0].classList.remove("disappear")
-        toggleBtn.children[1].classList.add("disappear")
+        hamburgerIcon.classList.remove("disappear")
+        closeIcon.classList.add("disappear")
         naviagtion.classList.remove("navigation-appear");
         logo.classList.remove("logo__white")
     }
@@ -47,6 +49,7 @@ form.addEventListener(`submit`, (e) => {
     }else{
         errorMsg.setAttribute("hidden", "true");
         inputField.setAttribute("aria-invalid", "true")
+        form.submit()
     }
 })
 

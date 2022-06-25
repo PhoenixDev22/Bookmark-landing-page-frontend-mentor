@@ -96,7 +96,7 @@ Users should be able to:
 - Mobile-first workflow
 - Js
 - Using the lighthouse.
-- Using Autoprefixer (Adding vendor prefixes)
+- Using Autoprefixer installed via npm and this setup in package.json.(I have removed the extra files.)
 
 
 
